@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import NavBar from './components/NavBar/NavBar';
 import RegForm from './components/RegForm/RegForm';
+import Menu from './components/Menu/Menu';
 
 import './App.css';
 
@@ -10,7 +11,8 @@ function App() {
    <div>
     
      <NavBar heading={heading} />
-     <RegForm />
+    {/* <RegForm />*/}
+     <Menu />
     
      
      </div>
