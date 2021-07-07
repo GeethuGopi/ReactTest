@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1136px;
+    margin:auto;
+    border:1px solid black;
+    margin-top: 50px;
+    height:80vh;
+}
+
+.container h2{
+    text-align: center;
+}
+.container .cardNum{
+    display:flex;
+    justify-content: center;
+   padding-top: 200px;
+
+}
+.container .secondRow{
+display: flex;
+justify-content: center;
+padding-top: 20px;
+}
+
+.container .secondRow .expiry{
+padding-left: 20px;
+}
+
+.container .button{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

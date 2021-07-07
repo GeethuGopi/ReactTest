@@ -1,12 +1,18 @@
 import React from 'react';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import RegForm from './components/RegForm/RegForm';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+   <div>
+    
      <NavBar />
-    </div>
+     <RegForm />
+    
+     
+     </div>
   );
 }
 
