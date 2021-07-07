@@ -4,12 +4,17 @@ import Button from '@material-ui/core/Button';
 import './RegForm.css';
 const RegForm = () =>{
     const [cardNum,setCardNum] = useState('');
-    console.log(cardNum);
     
     const [cvc,setCvc]=useState('');
-    console.log(cvc);
+    
     const[date,setDate] = useState('');
-    console.log(date);
+    
+
+    const handleSubmit=()=>{
+        console.log(cardNum);
+        console.log(cvc);
+        console.log(date);
+    }
     return(
         <div className="container">
        
@@ -23,7 +28,7 @@ const RegForm = () =>{
         <TextField style={{width:'100px'}} className="expiry" required id="outlined-basic" placeholder="expiry" variant="outlined" size="small" maxRows="3" value={date} onChange={(e)=>setDate(e.target.value)} />
         </div>
         <div className="button">
-            <Button disabled={!cardNum||!cvc||!date} style={{width:'250px'}}variant="contained" color="primary">Submit</Button>
+            <Button disabled={!cardNum||!cvc||!date} style={{width:'250px'}}variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
         </div>
         </form>
     

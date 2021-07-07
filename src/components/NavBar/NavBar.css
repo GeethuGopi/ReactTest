@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+ display:flex;
+ justify-content:center;
+ 
+ position:relative;
+}
+
+.heading h3{
+    position:absolute;
+    top:15px;
+}
