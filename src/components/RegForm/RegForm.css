@@ -7,8 +7,7 @@
 .container{
     max-width: 1136px;
     margin:auto;
-    border:1px solid black;
-    margin-top: 50px;
+    margin-top: 45px;
     height:80vh;
 }
 
@@ -18,13 +17,15 @@
 .container .cardNum{
     display:flex;
     justify-content: center;
-   padding-top: 200px;
+    padding-top: 200px;
+    
 
 }
 .container .secondRow{
 display: flex;
 justify-content: center;
 padding-top: 20px;
+padding-left: 60px;
 }
 
 .container .secondRow .expiry{
@@ -34,5 +35,9 @@ padding-left: 20px;
 .container .button{
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 25px;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;}

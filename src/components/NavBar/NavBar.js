@@ -31,14 +31,14 @@ const NavBar = () => {
         { isBurgerIcon ? (
         <Toolbar>
         <Link to="/Menu">
-            <IconButton color="#fff" aria-label="menu" onClick={handleState} >
-            <MenuIcon /> 
+            <IconButton  aria-label="menu" onClick={handleState} >
+            <MenuIcon style={{color:'#fff'}} /> 
             </IconButton>
             </Link>
         </Toolbar>) : (<Toolbar>
         <Link to="/">
-            <IconButton color="#fff" aria-label="menu" onClick={handleStateTwo} >
-            <KeyboardBackspaceIcon />
+            <IconButton aria-label="menu" onClick={handleStateTwo} >
+            <KeyboardBackspaceIcon style={{color:'#fff'}}/>
             </IconButton>
             </Link>
         </Toolbar>)

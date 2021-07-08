@@ -9,7 +9,18 @@ const RegForm = () =>{
     const [cvc,setCvc]=useState('');
     
     const[date,setDate] = useState('');
+
+    const checkCreditcardNum = (e) =>{
+        if (e.target.value.split("").length <= 16) {
+            setCardNum(e.target.value)
+        }  
+    }
     
+    const checkCvcNum = (e) => {
+        if (e.target.value.split("").length <= 4) {
+            setCvc(e.target.value)
+        } 
+    }
 
     const handleSubmit=()=>{
         console.log(cardNum);
@@ -22,14 +33,14 @@ const RegForm = () =>{
         <h2>Welcome</h2>
         <form>
         <div className="cardNum">
-        <TextField required id="outlined-basic" label="Credit card" variant="outlined" size="small" type="number" value={cardNum} onChange={(e)=>{setCardNum(e.target.value)}}/>
+        <TextField style={{width:'300px'}}  required id="outlined-basic" label="Credit card" variant="outlined" size="small" type="number" value={cardNum} onChange={checkCreditcardNum}/>
         </div>
         <div className="secondRow">
-        <TextField style={{width:'100px'}} required id="outlined-basic" placeholder="cvc" variant="outlined" size="small" type="number" value={cvc} onChange={(e)=>setCvc(e.target.value)}/>
-        <TextField style={{width:'100px'}} className="expiry" required id="outlined-basic" placeholder="expiry" variant="outlined" size="small" maxRows="3" value={date} onChange={(e)=>setDate(e.target.value)} />
+        <TextField style={{width:'90px'}} required id="outlined-basic" placeholder="cvc" variant="outlined" size="small" type="number" value={cvc} onChange={checkCvcNum}/>
+        <TextField style={{width:'150px'}} className="expiry" required id="outlined-basic" placeholder="expiry" variant="outlined" size="small"  value={date} type = "date" onChange={(e)=>setDate(e.target.value)} />
         </div>
         <div className="button">
-            <Button disabled={!cardNum||!cvc||!date} style={{width:'250px'}} variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
+            <Button  disabled={!cardNum||!cvc||!date} style={{width:'300px'}} variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
         </div>
         </form>
     
