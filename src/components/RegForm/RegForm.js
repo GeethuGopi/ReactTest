@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+
 import './RegForm.css';
 const RegForm = () =>{
     const [cardNum,setCardNum] = useState('');
@@ -28,7 +29,7 @@ const RegForm = () =>{
         <TextField style={{width:'100px'}} className="expiry" required id="outlined-basic" placeholder="expiry" variant="outlined" size="small" maxRows="3" value={date} onChange={(e)=>setDate(e.target.value)} />
         </div>
         <div className="button">
-            <Button disabled={!cardNum||!cvc||!date} style={{width:'250px'}}variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
+            <Button disabled={!cardNum||!cvc||!date} style={{width:'250px'}} variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
         </div>
         </form>
     
