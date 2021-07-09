@@ -15,7 +15,7 @@ const RegForm = () =>{
     const validateDate = (value) => {
         if(validator.isDate(value)){
            
-            setErrorMsg("correct Date")
+            setErrorMsg("")
              setDate(value)
         } else {
             setErrorMsg("Enter Valid Date (yyy/mm/dd)")
@@ -50,9 +50,9 @@ const RegForm = () =>{
         </div>
         <div className="secondRow">
         <TextField style={{width:'90px'}} required id="outlined-basic" label="Cvc"  variant="outlined" size="small" type="number" value={cvc} onChange={checkCvcNum}/>
-        <TextField style={{width:'150px'}} className="expiry" required id="outlined-basic" label="expiry" variant="outlined" size="small"   type = "text"  onChange={(e)=>validateDate(e.target.value)} />
-        <span style={{fontWeight:"bold",color:"red"}}>{errorMsg}</span>
+        <TextField style={{width:'150px'}} className="expiry" required id="outlined-basic" placeholder="expiry" variant="outlined" size="small"   type = "text"  onChange={(e)=>validateDate(e.target.value)} /> 
         </div>
+        <span className = "errorMsg">{errorMsg}</span>
         <div className="button">
             <Button  disabled={!cardNum||!cvc||!date} style={{width:'300px'}} variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
         </div>
