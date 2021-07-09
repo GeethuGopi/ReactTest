@@ -45,18 +45,18 @@ const RegForm = () =>{
             <form>
                 <div className="cardNum">
                     <TextField style={{width:'300px'}}  required id="outlined-basic"
-                     label="Credit card" variant="outlined" size="small" type="number" 
+                     label="Credit card number" variant="outlined" size="small" type="number" 
                      value={cardNum} onChange={checkCreditcardNum}/>
                 </div>
 
                 <div className="secondRow">
                     <TextField style={{width:'90px'}} required id="outlined-basic" 
-                    label="Cvc"  variant="outlined" size="small" type="number" 
+                    label="CVC"  variant="outlined" size="small" type="number" 
                     value={cvc} onChange={checkCvcNum}/>
                     
                     <TextField style={{width:'150px'}} className="expiry" required 
                     id="outlined-basic" placeholder="expiry" variant="outlined" 
-                    size="small"   type = "text"  onChange={(e)=>validateDate(e.target.value)} /> 
+                    size="small" type ="text" onChange={(e)=>validateDate(e.target.value)} /> 
                 </div>
 
                  <span className = "errorMsg">{errorMsg}</span>
