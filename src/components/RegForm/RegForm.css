@@ -52,4 +52,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;}
 
-    
+    @media(min-width:300px) and (max-width:414px){
+
+        .container .errorMsg{
+         
+            left:100px;
+            
+        }
+    }
