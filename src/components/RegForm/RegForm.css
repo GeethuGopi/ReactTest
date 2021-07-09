@@ -1,62 +1,55 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    max-width: 500px; /*1136px*/
-    margin:auto;
+.container {
+    max-width: 500px;
+    margin: auto;
     margin-top: 45px;
-    height:80vh;
-    position:relative;
-    border:1px solid black;
+    height: 80vh;
+    position: relative;
 }
 
-.container h2{
+.container h2 {
     text-align: center;
 }
-.container .cardNum{
+
+.container .cardNum {
     display:flex;
     justify-content: center;
     padding-top: 200px;
-    
-
-}
-.container .secondRow{
-display: flex;
-justify-content: center;
-padding-top: 20px;
-padding-left: 60px;
 }
 
-.container .errorMsg{
+.container .secondRow {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.container .errorMsg {
     color:red;
-    position:absolute;
-    left:200px;
-    font-size:12px;
-    font-weight:bold;
+    position: absolute;
+    left: 200px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.container .secondRow .expiry{
-padding-left: 20px;
+.container .secondRow .expiry {
+    padding-left: 20px;
 }
 
-.container .button{
+.container .button {
     display: flex;
     justify-content: center;
     padding-top: 25px;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;}
-
-    @media(min-width:300px) and (max-width:414px){
-
-        .container .errorMsg{
-         
-            left:100px;
-            
+ @media(min-width:300px) and (max-width:414px) {
+        
+    .container .errorMsg {
+         left:100px;   
         }
-    }
+}

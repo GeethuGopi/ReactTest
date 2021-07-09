@@ -12,40 +12,39 @@ const NavBar = () => {
     const [heading,setHeading] = useState("Register card form") 
     const [isBurgerIcon,setIsBurgerIcon] = useState(true)
 
-    const handleState = ()=>{
+    const handleStateOne = () => {
         setHeading("Menu");
         setIsBurgerIcon(false)
     }
 
-    const handleStateTwo = ()=>{
+    const handleStateTwo = () => {
         setHeading("Register card form");
         setIsBurgerIcon(true)
     }
     return(
         <div>
-        <header>
-        <AppBar position="static" >
-        <div className="heading">
-        <h3>{heading}</h3>
-        </div>
-        { isBurgerIcon ? (
-        <Toolbar>
-        <Link to="/Menu">
-            <IconButton  aria-label="menu" onClick={handleState} >
-            <MenuIcon style={{color:'#fff'}} /> 
-            </IconButton>
-            </Link>
-        </Toolbar>) : (<Toolbar>
-        <Link to="/">
-            <IconButton aria-label="menu" onClick={handleStateTwo} >
-            <KeyboardBackspaceIcon style={{color:'#fff'}}/>
-            </IconButton>
-            </Link>
-        </Toolbar>)
-        }
-    </AppBar>
-    </header>
-    
+            <header>
+                <AppBar position="static" >
+                    <div className="heading">
+                        <h3>{heading}</h3>
+                    </div>
+                    { isBurgerIcon ? (
+                        <Toolbar>
+                            <Link to="/Menu">
+                                <IconButton  aria-label="menu" onClick={handleStateOne} >
+                                    <MenuIcon style={{color:'#fff'}} /> 
+                                </IconButton>
+                            </Link>
+                        </Toolbar>) : (<Toolbar>
+                            <Link to="/">
+                                <IconButton aria-label="menu" onClick={handleStateTwo} >
+                                    <KeyboardBackspaceIcon style={{color:'#fff'}}/>
+                                </IconButton>
+                            </Link>
+                        </Toolbar>)
+                    }
+                </AppBar>
+            </header>
         </div>
     )
 }
